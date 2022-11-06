@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Számológép</title>
+  <script>
+    function osszead() {
+    var szam1 = document.getElementById("szam1").value;
+    var szam2 = document.getElementById("szam2").value;
+    document.getElementById("eredmeny").innerHTML = parseFloat(szam1) + parseFloat(szam2);
+}
+
+function kivon() {
+    var szam1 = document.getElementById("szam1").value;
+    var szam2 = document.getElementById("szam2").value;
+    document.getElementById("eredmeny").innerHTML = parseFloat(szam1) - parseFloat(szam2);
+}
+
+function szoroz() {
+    var szam1 = document.getElementById("szam1").value;
+    var szam2 = document.getElementById("szam2").value;
+    document.getElementById("eredmeny").innerHTML = parseFloat(szam1) * parseFloat(szam2);
+}
+
+function oszt() {
+    var szam1 = document.getElementById("szam1").value;
+    var szam2 = document.getElementById("szam2").value;
+    document.getElementById("eredmeny").innerHTML = parseFloat(szam1) / parseFloat(szam2);
+}
+  </script>
+</head>
+
+<body>
+  <form action="">
+    <table>
+      <tr>
+        <td>
+          <label>Kérem az első számot:</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="number" id="szam1">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Kérem a második számot:</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="number" id="szam2">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" onclick="osszead()" value="+">
+          <input type="button" onclick="kivon()" value="-">
+          <input type="button" onclick="szoroz()" value="*">
+          <input type="button" onclick="oszt()" value="/">
+          <h2>Eredmény:</h2>
+          <h2 id="eredmeny"></h2>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
